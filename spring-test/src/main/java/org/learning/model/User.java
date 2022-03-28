@@ -1,3 +1,5 @@
+package org.learning.model;
+
  
 
 import org.hibernate.annotations.CreationTimestamp;

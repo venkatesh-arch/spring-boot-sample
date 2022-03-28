@@ -3,6 +3,8 @@ package org.learning.model;
 
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import java.util.Date;
+
 import javax.persistence.*;
 
 
@@ -25,10 +27,14 @@ public class BookModel {
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "published_date", nullable = true)
-	private String publishedDate;
+	private Date publishedDate;
 
+	
+	public BookModel(){
+		
+	}
 	 
-	public BookModel(String name, String author, String category, float price, String publishedDate) {
+	public BookModel(String name, String author, String category, float price, Date publishedDate) {
 		super();
 		this.name = name;
 		this.author = author;
@@ -96,14 +102,14 @@ public class BookModel {
 	/**
 	 * @return the publishedDate
 	 */
-	public String getPublishedDate() {
+	public Date getPublishedDate() {
 		return publishedDate;
 	}
 
 	/**
 	 * @param publishedDate the publishedDate to set
 	 */
-	public void setPublishedDate(String publishedDate) {
+	public void setPublishedDate(Date publishedDate) {
 		this.publishedDate = publishedDate;
 	}
 
